@@ -18,8 +18,7 @@ namespace qei.Controllers
         [HttpGet("create")]
         public async Task<string> Create(string email)
         {
-            var result = await _queiService.Create(email);
-            return result;
+            return await _queiService.Create(email);
         }
 
         [HttpGet("add")]
@@ -31,8 +30,7 @@ namespace qei.Controllers
         [HttpGet("get")]
         public async Task<string> Get(string database, string key)
         {
-            var result = await _queiService.Get(database, key);
-            return result;
+            return await _queiService.Get(database, key);
         }
     }
 }
